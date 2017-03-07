@@ -10,6 +10,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: similife
 Tags:
 
+
+
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
@@ -104,3 +106,18 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+/*--------------------------------------------------------------
+# Partials
+--------------------------------------------------------------*/
+@import "partials/header";
+@import "partials/featured";
+
+
+// docasne oddelani admin baru
+
+#wpadminbar {display: none !important}
+
+html[lang="en-US"] {
+	margin-top: 0 !important;
+}

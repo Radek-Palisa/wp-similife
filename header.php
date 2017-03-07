@@ -15,6 +15,7 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
+<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
 
 <?php wp_head(); ?>
 </head>
@@ -38,12 +39,22 @@
 				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 			<?php
 			endif; ?>
-		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'similife' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+			<a class="site-branding__logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<img src="http://localhost/wp-similife/wp-content/uploads/2017/03/logo-cut-small-logo.png" alt="SimiLife">
+				<img src="http://localhost/wp-similife/wp-content/uploads/2017/03/logo-cut-small-desc.png" alt="Lifestyle blog">
+			</a>
+		</div><!-- .site-branding -->
+		<div class="header-site-navigation" id="headerSiteNavigation">
+			<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'similife' ); ?></button> -->
+			<button class="menu-button menu-button--sm" id="menuButton">
+				<b>Menu</b>
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+		</div><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

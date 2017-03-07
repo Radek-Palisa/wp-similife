@@ -107,7 +107,7 @@ add_action( 'widgets_init', 'similife_widgets_init' );
 function similife_scripts() {
 	wp_enqueue_style( 'similife-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'similife-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'similife-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151223', true );
 
 	wp_enqueue_script( 'similife-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
