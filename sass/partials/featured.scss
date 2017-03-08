@@ -1,0 +1,13 @@
+.featured {
+	width: 100%;
+	margin-bottom: 10px;
+	background-color: lightgray;
+	display: flex;
+	flex-wrap: wrap;
+
+	> div {
+		width: 50%;
+		padding-bottom: 25%;
+		border: 1px solid #e8e8e8;
+	}
+}

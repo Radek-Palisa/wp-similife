@@ -1,0 +1,201 @@
+.site-header
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	z-index: 5
+	display: flex
+	flex-wrap: wrap
+	padding: 10px 0
+	background-color: white 
+	overflow: hidden
+
+.site-header--pos-fixed
+	z-index: 95
+	position: fixed
+	left: 0
+	right: 0
+	top: -61px
+	height: 61px
+	padding: 5px 0
+	justify-content: space-between
+	border-bottom: 2px solid #c5d2d2
+	
+	.site-branding
+		width: 100px
+		@media (min-width: $break-header)
+			width: 85px
+		height: 50px
+		margin: 0 0 0 10px
+		padding-top: 0
+
+		&__logo
+			> img:last-of-type
+				display: none
+
+	.header-site-navigation
+		width: auto
+		order: 1
+
+		&::before, &::after
+			background-image: none
+
+		> nav ul > li > a 	
+			font-size: 11px
+
+		> span + span 
+			margin-left: 15px
+
+	.menu-button
+		margin-left: 0
+
+		> span 	
+			width: 26px
+			height: 3px
+			border-radius: 15%
+
+		> span:nth-of-type(2)
+			margin: 4px 0
+
+		&--sm
+			padding-right: 15px
+
+.site-header.nav-up
+	transform: translateY(0)
+	transition: transform 0.3s linear
+
+.site-header.nav-down
+	transform: translateY(100%)
+	transition: transform 0.3s linear
+
+.site-branding
+	order: 1
+	width: 100%
+	height: 100px
+	@media (min-width: $break-header)
+		height: 120px
+	margin: 0 auto
+	font-size: 50px
+	line-height: 1
+	font-family: 'Sorreda Pro'
+	padding-top: 17px
+	color: white
+	letter-spacing: 1px
+	text-align: center
+	white-space: nowrap
+
+	&__logo
+		display: inline-block
+
+		> img 
+			display: block
+
+		> img:first-of-type
+			@media (max-width: $break-header)
+				width: 80%
+			margin: 0 auto
+
+.header-site-navigation
+	order: 3
+	width: 100%
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	text-align: center
+	//border-top: 1px solid #e5efef
+	//border-bottom: 1px solid #e5efef
+
+	&::before, &::after 
+		content: ''
+		position: absolute 	
+		height: 1px
+		width: 100%
+		background-image: linear-gradient(90deg, #d4dcdc, #c5d2d2, #d4dcdc)
+		
+	&::before
+		top: 0
+	&::after 
+		bottom: 0
+
+.main-navigation > div
+
+	> ul > li 
+		display: inline-block
+
+		> a
+			display: inline-block
+			padding: 7px 17px
+			letter-spacing: 1.3px
+			color: #666
+			font-size: 13px
+			border-radius: 3px
+			cursor: pointer
+			font-weight: 500
+			text-transform: uppercase
+			text-decoration: none
+
+			&:hover 
+				color: black
+
+	> li + li
+		margin-left: 20px
+
+.menu-button
+	display: none
+	order: 2
+	outline: 0
+	border: 0
+	background: none
+	box-shadow: none
+	cursor: pointer
+
+	&--sm
+		margin: 0
+		padding: 11px 30px
+
+		> b 
+			display: inline-block
+
+		> span
+			width: 26px
+			margin-left: 55px !important
+
+		> span:nth-of-type(2)
+			margin: 4px 0
+
+	&--lg
+		width: 45px
+		margin-left: -65px
+		margin-right: 20px
+		padding: 8px
+
+		> b 
+			display: none
+
+		> span 
+			width: 30px			
+
+		> span:nth-of-type(2)
+			margin: 6px 0
+
+	&:focus
+		box-shadow: initial
+		border: 0
+
+	> b 
+		float: left
+		margin-right: 20px
+		font-size: 14px
+		text-transform: uppercase
+		padding-top: 2px
+		letter-spacing: 1px	
+
+	> span
+		display: block
+		height: 3px
+		background-color: #97bfbf
+		border-radius: 15%
+
+
+

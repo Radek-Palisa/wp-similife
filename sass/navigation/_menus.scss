@@ -1,89 +1,7 @@
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
 
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
-
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 1.5em;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-
-	li {
-		float: left;
-		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
-	}
-
-	a {
-		display: block;
-		text-decoration: none;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-	}
-}
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
-}
 
 .comment-navigation,
 .posts-navigation,
@@ -103,5 +21,201 @@
 		float: right;
 		text-align: right;
 		width: 50%;
+	}
+}
+
+$break-sm: 640px;
+
+// on body
+.menu-opened {
+	overflow: hidden;
+	padding-right: 17px;
+}
+
+.menu-slide--js > .menu-slide__closeBtn {
+	display: block;
+}
+
+// close button
+.menu-slide__closeBtn {
+	
+	display: none;
+	z-index: 101;
+	width: 100%;
+	padding: 19px;
+	outline: 0;
+	border: 0;
+	background: none;
+	box-shadow: none;
+	cursor: pointer;
+
+	@media (max-width: $break-header) {
+		border-bottom: 2px solid #c5d2d2;
+		background-color: white;
+
+		> span > span {
+			margin-left: 60px;
+			background-color: $highlight-color;
+		}
+
+
+	}
+
+	@media (min-width: $break-header) {
+		opacity: 0;
+		position: absolute;
+		width: 45px;
+		right: 430px;
+		top: 20px;
+		padding: 8px;
+
+		> span > span {
+			background-color: white;
+		}
+
+		&__label {
+			clip: rect(1px, 1px, 1px, 1px);
+			position: absolute !important;
+			height: 1px;
+			width: 1px;
+			overflow: hidden;
+
+			&:focus {
+				background-color: $color__background-screen;
+				border-radius: 3px;
+				box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+				clip: auto !important;
+				color: $color__text-screen;
+				display: block;
+				@include font-size(0.875);
+				font-weight: bold;
+				height: auto;
+				left: 5px;
+				line-height: normal;
+				padding: 15px 23px 14px;
+				text-decoration: none;
+				top: 5px;
+				width: auto;
+				z-index: 100000; /* Above WP toolbar. */
+			}
+		}
+	}
+	// &:focus {
+	// 	box-shadow: initial;
+	// 	border: 0;
+	// }
+
+	&__label {
+		display: inline-block;
+		float: left;
+		padding: 3px;
+		font-size: 13px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+
+	> span {
+		display: inline-block;
+
+		> span {
+			display: block;
+			width: 30px;
+			height: 2px;		
+			border-radius: 20%;
+
+			&:first-of-type {
+	    		transform: rotateZ(-45deg) translate(-1px, -5px);
+	    		transform-origin: right;
+			}
+
+			&:nth-of-type(2) {
+				opacity: 0;
+				margin: 6px 0;
+			}
+
+			&:last-of-type {
+				transform: rotateZ(45deg) translate(-1px, 5px);
+		    	transform-origin: right;
+			}
+		}
+	}	
+}
+
+.menu-slide--js {
+	display: none;
+	z-index: 100;
+	//display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(255,255,255,0.9);
+	@media (min-width: $break-header) {
+		background-color: rgba(0,0,0,0.6);
+	}
+}
+
+.menu-slide--activated {
+	
+	.menu-slide__closeBtn {
+		opacity: 1 !important;
+		transition: opacity 100ms linear 0.3s;
+	}
+
+	.right-sidebar {
+		@media (min-width: $break-header) {
+			transform: translateX(-100%);
+			transition: transform 300ms linear;
+		}
+	}
+}
+
+.menu-slide--js {
+
+	.right-sidebar {
+		height: 100vh;
+		overflow-y: auto;
+
+		@media (min-width: $break-header) {
+			position: absolute;
+			left: 100%;
+			top: 0;
+			background-color: white;
+			box-shadow: -6px 0 20px rgba(0, 0, 0, 0.34);
+			transition: transform 200ms linear;
+		}
+
+		&-inner {
+			max-width: 100%;
+			width: 400px;
+			padding: 20px;
+		}
+	}
+
+	.search-form input {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.social-aside {
+		position: static;
+
+		&__link-holder {
+			margin-top: 20px;
+			text-align: center;
+
+			> li {
+				display: inline-block;
+				margin: 10px;
+
+				> a {
+					width: 120px;
+					padding: 0 10px 0 35px;
+					text-align: left;
+					text-decoration: none;
+				}
+			}
+		}
 	}
 }

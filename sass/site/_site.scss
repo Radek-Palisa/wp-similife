@@ -1,3 +1,24 @@
+
+
+.site {
+	position: relative;
+	padding-top: 159px;
+	margin: 0 4px;
+
+	@media (min-width: $break-header) {
+		padding-top: 173px;
+	}
+
+	@media (min-width: $break-md) {
+		margin: 0 10px;
+	}
+
+	@media (min-width: 1700px) {
+		margin: 0 44px;
+	}
+}
+
+
 // @import "../layout/content-sidebar";
 // @import "../layout/sidebar-content";
 /*--------------------------------------------------------------
