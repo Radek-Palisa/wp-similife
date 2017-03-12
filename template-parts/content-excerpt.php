@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part for displaying post excerpts on index page
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *

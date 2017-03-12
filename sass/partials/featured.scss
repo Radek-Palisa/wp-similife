@@ -1,13 +1,151 @@
+
 .featured {
-	width: 100%;
-	margin-bottom: 10px;
-	background-color: lightgray;
+	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 
-	> div {
+	&__item {
+		position: relative;
 		width: 50%;
-		padding-bottom: 25%;
-		border: 1px solid #e8e8e8;
+
+		&--1 {
+			padding-right: 2px;
+			padding-bottom: 2px;
+		}
+
+		&--2 {
+			padding-left: 2px;
+			padding-bottom: 2px;
+		}
+
+		&--3 {
+			padding-top: 2px;
+			padding-right: 2px;
+		}
+
+		&--4 {
+			padding-top: 2px;
+			padding-left: 2px;
+		}
+	}
+
+	@media (min-width: $break-featured) {
+		display: block;
+		height: 0;
+		padding-bottom: 20%;
+
+		&__item {
+			z-index: 1;
+			position: absolute;
+			top: 0;
+			height: 100%;
+			width: 30%;
+			padding: 0;
+
+			&--1 {
+				left: 0;
+			}
+
+			&--4 {
+				right: 0;
+			}
+
+			&--2, &--3 {
+				z-index: 2;
+				width: 26%;
+				overflow: hidden;
+				transform: skewX(-20deg);
+
+				> a {
+					width: 132%;
+					transform: translateX(-12%) skewX(20deg);
+				}
+			}
+
+			&--2 {
+				left: 24%;
+				border-left: 8px solid white;
+				border-right: 4px solid white;
+			}
+
+			&--3 {
+				left: 50%;
+				border-left: 4px solid white;
+				border-right: 8px solid white;
+			}
+		}
+	}
+}
+
+.featured-thumb {
+	padding-bottom: 80%;
+	background-size: cover;
+
+	@media (min-width: $break-header) {
+		padding-bottom: 60%
+	}
+
+	@media (min-width: $break-featured) {
+		padding-bottom: 0;
+		height: 100%;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0; right: 0; top: 0; bottom: 0;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)); 
+	}
+}
+
+.featured__item > a {
+	position: relative;
+	display: block;
+	text-decoration: none;
+	color: white;
+
+	> h2 {
+		position: absolute;
+		bottom: 3%;
+		left: 3%;
+		right: 5px;
+		margin: 0;
+		line-height: 1.35;
+		font-size: 13px;
+		font-size: calc(13px + (18 - 13) * ((100vw - 300px) / (930 - 300)));
+		font-weight: 600;
+	}
+
+	@media (min-width: $break-header) {
+
+		> h2 {
+			max-width: 65%
+		}
+	}
+
+	@media (min-width: $break-featured) {
+		height: 100%;
+
+		> h2 {
+			max-width: 56%;
+			font-size: 18px;
+		}
+	}
+}
+
+@media (min-width: $break-featured) {
+	.featured__item {
+		&--1 > a > h2 {
+			left: 5%;
+		}
+		&--2 > a > h2 {
+			left: 18%;
+		}
+		&--3 > a > h2 {
+			left: 18%
+		}
+		&--4 > a > h2 {
+			left: 25%;
+		}
 	}
 }

@@ -15,14 +15,34 @@
 get_header(); ?>
 
 	<section class="featured">
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
+		<?php $my_query = new WP_Query( 'category_name=Featured&posts_per_page=4' );
+		$featuredCount = 0;
+		while ( $my_query->have_posts() ) : $my_query->the_post(); 
+		$featuredCount++; ?>
+			
+			<article class="featured__item featured__item--<?php echo $featuredCount ?>" id="post-<?php the_ID(); ?>">
+				<a href="<?php the_permalink(); ?>" rel="bookmark">
+					<?php if ( has_post_thumbnail() ) : ?>
+						<div class="featured-thumb" style="background-image: url('<?php the_post_thumbnail_url(); ?>')"></div>		
+					<?php else : ?>
+						<div>Thumbnail není k dispozici</div>
+					<?php endif; ?>
+					<h2><?php the_title(); ?></h2>
+				</a>
+			</article>
+
+		<?php endwhile; ?>
 	</section>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+
+		<section class="secondary-menu">
+			<strong class="secondary-menu__title">Rubriky</strong>
+			<?php wp_nav_menu( array( 'theme_location' => 'secondary-menu' ) ); ?>
+		</section>
+
+		<strong class="mobile-excerpts-title title-lines">Nejnovější příspěvky</strong>
 
 		<?php
 		if ( have_posts() ) :

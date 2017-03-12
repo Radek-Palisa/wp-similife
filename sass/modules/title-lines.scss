@@ -1,0 +1,19 @@
+.title-lines {
+
+	&::before, &::after {
+	content: '';
+	position: absolute;
+	left: 0;	
+	height: 1px;
+	width: 100%;
+	background-image: linear-gradient(90deg, #d4dcdc, #c5d2d2, #d4dcdc);
+	}
+	
+	&::before {
+		top: 0
+	}
+
+	&::after { 
+		bottom: 0
+	}
+}

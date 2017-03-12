@@ -45,7 +45,7 @@
 				<img src="http://localhost/wp-similife/wp-content/uploads/2017/03/logo-cut-small-desc.png" alt="Lifestyle blog">
 			</a>
 		</div><!-- .site-branding -->
-		<div class="header-site-navigation" id="headerSiteNavigation">
+		<div class="header-site-navigation title-lines" id="headerSiteNavigation">
 			<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'similife' ); ?></button> -->
 			<button class="menu-button menu-button--sm" id="menuButton">
 				<b>Menu</b>
