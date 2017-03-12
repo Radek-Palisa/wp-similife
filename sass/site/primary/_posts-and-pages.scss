@@ -25,3 +25,22 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+
+.social-following {
+	display: none;
+
+	@media (min-width: $break-featured) {
+		display: block;
+		padding: 10px 0;
+
+		> strong {
+			position: relative;
+			display: block;
+			text-align: center;
+			line-height: 2;
+		}
+	}
+}
+
+

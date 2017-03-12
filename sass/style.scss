@@ -84,7 +84,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-@import "site/secondary/widgets";
+@import "site/secondary/right-sidebar";
 
 /*--------------------------------------------------------------
 # Content
@@ -106,6 +106,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 @import "partials/header";
 @import "partials/featured";
+@import "partials/excerpt";
 
 
 // docasne oddelani admin baru

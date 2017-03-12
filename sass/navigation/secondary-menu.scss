@@ -2,6 +2,10 @@
 .secondary-menu {
 	line-height: 2;
 
+	@media (max-width: $break-featured) {
+		background-color: white;		
+	}
+
 	&__title {
 		position: relative;
 		display: block;
@@ -12,6 +16,24 @@
 		letter-spacing: 1px;
 		text-transform: uppercase;
 		@extend .title-lines;
+
+		@media (min-width: $break-header) {
+			font-weight: normal;
+		}
+	}
+
+	@media (min-width: $break-featured) {
+		margin-left: -70px;
+
+		&__title {
+			text-align: right;
+			margin: 0;
+			padding: 0;
+
+			&::before, &::after {
+				content: none !important;
+			}			
+		}
 	}
 }
 
@@ -34,6 +56,30 @@
 				background-color: white;
 				color: #333;
 				text-decoration: none;
+			}
+		}
+	}
+
+	@media (min-width: $break-featured) {
+
+		>ul {
+			padding: 7px 0;
+
+			> li {
+				display: block;
+				margin: 0 0 5px 0;
+				text-align: right;
+
+				> a {
+					line-height: 1.2;
+					font-size: 18px;
+					border-right: 2px solid lightgrey;
+					transition: border-right 0.07s ease-in-out;
+
+					&:hover {
+						border-right: 2px solid $highlight-color;
+					}
+				}
 			}
 		}
 	}

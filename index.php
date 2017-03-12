@@ -34,51 +34,58 @@ get_header(); ?>
 		<?php endwhile; ?>
 	</section>
 
+	<section class="social-following">
+		<strong class="title-lines">i, i follow, follow you, deep sea baby</strong>
+	</section>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<section class="secondary-menu">
+				<strong class="secondary-menu__title">Rubriky</strong>
+				<?php wp_nav_menu( array( 'theme_location' => 'secondary-menu' ) ); ?>
+			</section>
 
-		<section class="secondary-menu">
-			<strong class="secondary-menu__title">Rubriky</strong>
-			<?php wp_nav_menu( array( 'theme_location' => 'secondary-menu' ) ); ?>
-		</section>
+			<div class="excerpts-outer">
 
-		<strong class="mobile-excerpts-title title-lines">Nejnovější příspěvky</strong>
-
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+				<header class="excerpts-header">
+					<strong>Nejnovější příspěvky</strong>
 				</header>
 
-			<?php
-			endif;
+				<?php
+				if ( have_posts() ) :
 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+					if ( is_home() && ! is_front_page() ) : ?>
+						<header>
+							<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+						</header>
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'excerpt' );
-				//get_template_part( 'template-parts/content', get_post_format() );
+					<?php
+					endif;
 
-			endwhile;
+					/* Start the Loop */
+					while ( have_posts() ) : the_post();
 
-			the_posts_navigation();
+						/*
+						 * Include the Post-Format-specific template for the content.
+						 * If you want to override this in a child theme, then include a file
+						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+						 */
+						get_template_part( 'template-parts/content', 'excerpt' );
+						//get_template_part( 'template-parts/content', get_post_format() );
 
-		else :
+					endwhile;
 
-			get_template_part( 'template-parts/content', 'none' );
+					the_posts_navigation();
 
-		endif; ?>
+				else :
 
+					get_template_part( 'template-parts/content', 'none' );
+
+				endif; ?>
+			</div>
+
+			<?php get_sidebar(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>

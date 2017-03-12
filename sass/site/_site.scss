@@ -18,18 +18,18 @@
 	}
 }
 
-.mobile-excerpts-title {
-	position: relative;
-	display: block;
-	margin: 10px 0;
-	padding: 5px 0;
-	line-height: 2;
-	font-size: 14px;
-	text-align: center;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
+.site-main {
 
+	@media (min-width: $break-excerpt-image) {
+		background-color: $grey-bg;
+	}
+
+	@media (min-width: $break-featured) {
+		display: flex;
+		justify-content: center;
+		padding: 44px 0; 
+	}
+}
 
 // @import "../layout/content-sidebar";
 // @import "../layout/sidebar-content";

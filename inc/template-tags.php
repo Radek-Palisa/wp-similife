@@ -25,8 +25,7 @@ function similife_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'similife' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		esc_html_x( '%s', 'post date', 'similife' ), $time_string
 	);
 
 	$byline = sprintf(
@@ -38,6 +37,20 @@ function similife_posted_on() {
 
 }
 endif;
+
+if ( ! function_exists( 'similife_entry_tags' ) ) :
+/**
+ * Prints HTML with meta information for the categories, tags and comments.
+ */
+function similife_entry_tags() {
+	/* translators: used between list items, there is a space after the comma */
+	$tags_list = get_the_tag_list( '', esc_html__( ', ', 'similife' ) );
+	if ( $tags_list ) {
+		printf( '<div class="tags-links"><strong class="screen-reader-text">Štítky</strong>' . esc_html__( '%1$s', 'similife' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+	}
+}
+endif;
+
 
 if ( ! function_exists( 'similife_entry_footer' ) ) :
 /**
