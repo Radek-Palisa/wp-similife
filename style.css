@@ -531,6 +531,9 @@ a:hover, a:active {
     border-bottom: 2px solid #c5d2d2;
     background-color: white;
   }
+  .menu-slide__closeBtn > span {
+    margin-right: -32px;
+  }
   .menu-slide__closeBtn > span > span {
     margin-left: 60px;
     background-color: #ff1896;
@@ -876,14 +879,40 @@ a:hover, a:active {
   padding: 0;
 }
 .menu-slide--js .main-navigation {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+}
+.menu-slide--js .main-navigation > div > ul {
+  display: flex;
 }
 .menu-slide--js .main-navigation > div > ul > li {
+  width: 33.33%;
   display: block;
   text-align: center;
 }
 .menu-slide--js .main-navigation > div > ul > li:first-of-type, .menu-slide--js .main-navigation > div > ul > li:nth-of-type(2) {
   display: none;
+}
+.menu-slide--js .main-navigation > div > ul > li:nth-of-type(4) {
+  position: relative;
+}
+.menu-slide--js .main-navigation > div > ul > li:nth-of-type(4)::before, .menu-slide--js .main-navigation > div > ul > li:nth-of-type(4)::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -7px;
+  height: 14px;
+  width: 1px;
+  background-color: lightgrey;
+}
+.menu-slide--js .main-navigation > div > ul > li:nth-of-type(4)::before {
+  left: -1px;
+}
+.menu-slide--js .main-navigation > div > ul > li:nth-of-type(4)::after {
+  right: -1px;
+}
+.menu-slide--js .main-navigation > div > ul > li > a {
+  padding: 7px 9px;
+  font-weight: bold;
 }
 
 .right-sidebar section {
@@ -926,14 +955,14 @@ a:hover, a:active {
  * SEARCH
  * -------------------------------------------- */
 .widget_search {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .widget_search > form {
   position: relative;
 }
 .widget_search > form > .search-text {
   width: 100%;
-  padding: 0;
+  padding: 10px 25px 3px 0;
   border: 0;
   border-bottom: 1px solid #d6d6d6;
   border-radius: 0;
@@ -941,27 +970,55 @@ a:hover, a:active {
   color: black;
   font-weight: 500;
   background: transparent;
+  transition: all 0.1s ease-in-out 0.2s;
 }
 .widget_search > form > .search-text:focus {
   border-bottom: 1px solid black;
 }
+.widget_search > form > .search-text:-webkit-autofill, .widget_search > form > .search-text:-webkit-autofill:hover, .widget_search > form > .search-text:-webkit-autofill:focus
+.widget_search > form > .search-text:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
 .widget_search > form > label {
   position: absolute;
   left: 0;
-  bottom: 2px;
+  bottom: 4px;
   font-style: italic;
+  color: grey;
+  cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 .widget_search > form > .search-text--focus + label {
-  transform: translateY(-115%);
+  transform: translateY(-29px);
   font-size: 0.9rem;
+  color: rgba(128, 128, 128, 0.7);
 }
 .widget_search > form > .search-submit {
   position: absolute;
   top: 0;
   bottom: 1px;
   right: 0;
+  width: 30px;
+  padding: 0;
   border: 0;
+  outline: none;
+  background-color: transparent;
+  background-image: url("/wp-similife/wp-content/uploads/2017/03/search-sm.png");
+  background-repeat: no-repeat;
+  background-position: right 3px bottom 7px;
+  background-size: 16px 16px;
+}
+
+.menu-slide--js .widget_search > form {
+  width: 82%;
+  margin: 0 auto;
+}
+.menu-slide--js .widget_search > form > .search-text {
+  border-bottom: 2px solid #666;
+}
+.menu-slide--js .widget_search > form > .search-text:focus {
+  border-bottom: 2px solid black;
 }
 
 /* STITKY */

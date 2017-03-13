@@ -31,14 +31,44 @@
 	}
 
 	.main-navigation {
-		margin-bottom: 30px;
+		margin-bottom: 25px;
 
-		> div > ul > li {
-			display: block;
-			text-align: center;
+		> div > ul {
+			display: flex;
 
-			&:first-of-type, &:nth-of-type(2) {
-				display: none;
+			> li {
+				width: 33.33%;
+				display: block;
+				text-align: center;
+
+				&:first-of-type, &:nth-of-type(2) {
+					display: none;
+				}
+
+				&:nth-of-type(4) {
+					position: relative;
+
+					&::before, &::after {
+						content: '';
+						position: absolute;
+						top: 50%;
+						margin-top: -7px;
+						height: 14px;
+						width: 1px;
+						background-color: lightgrey;
+					}
+					&::before {
+						left: -1px;
+					}
+					&::after {
+						right: -1px;
+					}
+				}
+
+				> a {
+					padding: 7px 9px;
+					font-weight: bold;
+				}
 			}
 		}
 	}
@@ -84,14 +114,14 @@
  * -------------------------------------------- */
 
 .widget_search {
-	margin-top: 20px;
+	margin-top: 10px;
  
  	> form {
  		position: relative;
 
 		> .search-text {
 			width: 100%;
-			padding: 0;
+			padding: 10px 25px 3px 0;
 			border: 0;
 			border-bottom: 1px solid #d6d6d6;
 			border-radius: 0;
@@ -99,33 +129,72 @@
 			color: black;
 			font-weight: 500;
 			background:transparent;
+			transition: all 0.1s ease-in-out 0.2s;
 
 			&:focus {
 				border-bottom: 1px solid black; //darkgrey;
 			}
+			&:-webkit-autofill,
+			&:-webkit-autofill:hover, 
+			&:-webkit-autofill:focus
+			&:-webkit-autofill {
+			//border-bottom: 1px solid #fff;
+			//-webkit-text-fill-color: green;
+			-webkit-box-shadow: 0 0 0px 1000px transparent inset;
+			transition: background-color 5000s ease-in-out 0s;
+}
 		}
 
  		> label {
 			position: absolute;
 			left: 0;
-			bottom: 2px;
+			bottom: 4px;
 			font-style: italic;
+			color: grey;
+			cursor: pointer;
 			transition: all 0.2s ease-in-out;
  		}
 
 		> .search-text--focus + label {
-			transform: translateY(-115%);
+			transform: translateY(-29px);
 			font-size: 0.9rem;
+			color: rgba(grey, 0.7);
 		}
 
  		> .search-submit {
  			position: absolute;
  			top: 0; bottom: 1px;
  			right: 0;
+ 			width: 30px;
+ 			padding: 0;
  			border: 0;
+ 			outline: none;
+ 			background-color: transparent;
+ 			background-image: url('/wp-similife/wp-content/uploads/2017/03/search-sm.png');
+ 			background-repeat: no-repeat;
+ 			background-position: right 3px bottom 7px;
+ 			background-size: 16px 16px;
  		}
  	}
  }
+
+.menu-slide--js {
+	.widget_search {
+	 
+	 	> form {
+	 		width: 82%;
+	    	margin: 0 auto;
+
+	    	> .search-text {
+				border-bottom: 2px solid #666; //#464646;
+
+				&:focus {
+					border-bottom: 2px solid black;
+				}
+	    	}
+	    }
+	}
+}
 
 /* STITKY */
 

@@ -53,12 +53,14 @@ $break-sm: 640px;
 		border-bottom: 2px solid #c5d2d2;
 		background-color: white;
 
-		> span > span {
-			margin-left: 60px;
-			background-color: $highlight-color;
+		> span {
+			margin-right: -32px;
+
+			> span {
+				margin-left: 60px;
+				background-color: $highlight-color;
+			}
 		}
-
-
 	}
 
 	@media (min-width: $break-header) {
