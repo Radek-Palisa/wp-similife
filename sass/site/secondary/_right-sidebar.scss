@@ -15,7 +15,7 @@
 	
 	&-inner {
 		width: 360px;
-		margin: auto;
+		margin: 0 auto;
 	}
 }
 
@@ -31,7 +31,7 @@
 	}
 
 	.main-navigation {
-		margin-bottom: 25px;
+		margin-top: 20px;
 
 		> div > ul {
 			display: flex;
@@ -74,7 +74,7 @@
 	}
 }
 .right-sidebar section {
-	text-align: center;
+	//text-align: center;
 	padding: 30px 30px 46px;
 	margin-bottom: 20px;
     /*border: 1px solid rgba(144, 143, 143, 0.23);*/
@@ -89,8 +89,9 @@
 	background: url('img/profile.png') center / 140% no-repeat;
 }
 
-.right-sidebar section h3 {
-	font-size: 1em;
+.right-sidebar section h2 {
+	text-align: center;
+	font-size: 16px;
 }
 
 .right-sidebar section p {
@@ -114,7 +115,7 @@
  * -------------------------------------------- */
 
 .widget_search {
-	margin-top: 10px;
+	margin-top: 20px;
  
  	> form {
  		position: relative;
@@ -140,9 +141,9 @@
 			&:-webkit-autofill {
 			//border-bottom: 1px solid #fff;
 			//-webkit-text-fill-color: green;
-			-webkit-box-shadow: 0 0 0px 1000px transparent inset;
-			transition: background-color 5000s ease-in-out 0s;
-}
+				-webkit-box-shadow: 0 0 0px 1000px transparent inset;
+				transition: background-color 5000s ease-in-out 0s;
+			}
 		}
 
  		> label {
@@ -182,7 +183,7 @@
 	.widget_search {
 	 
 	 	> form {
-	 		width: 82%;
+	 		width: 90%;
 	    	margin: 0 auto;
 
 	    	> .search-text {

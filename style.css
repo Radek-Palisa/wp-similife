@@ -645,6 +645,7 @@ a:hover, a:active {
     position: absolute;
     left: 100%;
     top: 0;
+    width: 400px;
     background-color: white;
     box-shadow: -6px 0 20px rgba(0, 0, 0, 0.34);
     transition: transform 200ms linear;
@@ -652,8 +653,7 @@ a:hover, a:active {
 }
 .menu-slide--js .right-sidebar-inner {
   max-width: 100%;
-  width: 400px;
-  padding: 20px;
+  width: 300px;
 }
 .menu-slide--js .search-form input {
   width: 100%;
@@ -867,7 +867,7 @@ a:hover, a:active {
 }
 .right-sidebar-inner {
   width: 360px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 @media (min-width: 730px) {
@@ -879,7 +879,7 @@ a:hover, a:active {
   padding: 0;
 }
 .menu-slide--js .main-navigation {
-  margin-bottom: 25px;
+  margin-top: 20px;
 }
 .menu-slide--js .main-navigation > div > ul {
   display: flex;
@@ -916,7 +916,6 @@ a:hover, a:active {
 }
 
 .right-sidebar section {
-  text-align: center;
   padding: 30px 30px 46px;
   margin-bottom: 20px;
   /*border: 1px solid rgba(144, 143, 143, 0.23);*/
@@ -931,8 +930,9 @@ a:hover, a:active {
   background: url("img/profile.png") center/140% no-repeat;
 }
 
-.right-sidebar section h3 {
-  font-size: 1em;
+.right-sidebar section h2 {
+  text-align: center;
+  font-size: 16px;
 }
 
 .right-sidebar section p {
@@ -955,7 +955,7 @@ a:hover, a:active {
  * SEARCH
  * -------------------------------------------- */
 .widget_search {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .widget_search > form {
   position: relative;
@@ -1011,7 +1011,7 @@ a:hover, a:active {
 }
 
 .menu-slide--js .widget_search > form {
-  width: 82%;
+  width: 90%;
   margin: 0 auto;
 }
 .menu-slide--js .widget_search > form > .search-text {
