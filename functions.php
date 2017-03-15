@@ -153,3 +153,13 @@ function new_excerpt_more( $more ) {
     return '...';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+
+function set_tag_cloud_sizes($args) {
+	$args['smallest'] = 1;
+	$args['largest'] = 1;
+	$args['unit'] = 'em';
+	$args['format'] = 'list';
+    return $args;
+}
+add_filter('widget_tag_cloud_args','set_tag_cloud_sizes');

@@ -73,20 +73,13 @@
 		}
 	}
 }
+
 .right-sidebar section {
 	//text-align: center;
 	padding: 30px 30px 46px;
 	margin-bottom: 20px;
     /*border: 1px solid rgba(144, 143, 143, 0.23);*/
     /*box-shadow: 1px 1px 31px rgba(0, 0, 0, 0.2);*/
-}
-
-.profile-pic {
-	width: 180px;
-	height: 180px;
-	margin: 30px auto;
-	border-radius: 50%;
-	background: url('img/profile.png') center / 140% no-repeat;
 }
 
 .right-sidebar section h2 {
@@ -101,7 +94,19 @@
 	line-height: 1.6;
 }
 
-.about a {
+/* --------------------------------
+ * O NMNE
+ * -------------------------------------------- */
+
+ .profile-pic {
+	width: 180px;
+	height: 180px;
+	margin: 30px auto;
+	border-radius: 50%;
+	background: url('img/profile.png') center / 140% no-repeat;
+}
+
+.about-link > a {
 	display: inline-block;
 	padding-bottom: 1px;
 	border-bottom: 1px solid #777;
@@ -197,9 +202,11 @@
 	}
 }
 
-/* STITKY */
+/* --------------------------------
+ * TAGS
+ * -------------------------------------------- */
 
-.secondary-nav__tags {
+.wp-tag-cloud {
 	display: flex;
 	flex-wrap: wrap;
 	list-style: none;
@@ -247,11 +254,15 @@
 	}
 }
 
-.archive, .adverts {
-	height: 500px;
-}
+/* --------------------------------
+ * SOCIAL MEDIA
+ * -------------------------------------------- */
 
-/* SOCIAL MEDIA */
+#text-3 {
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+}
 
 .social-aside {
 	margin-left: 20px;
@@ -302,10 +313,6 @@ ul.social-aside__link-holder {
 	}
 }
 
-.social-aside__link-holder li:first-of-type a {
-	background-color: #c62326;
-}
-
 .social-aside__link-holder li:nth-of-type(2) a {
 	background-color: #3b5999;
 }
@@ -343,9 +350,6 @@ ul.social-aside__link-holder {
 	background-repeat: no-repeat;
 }
 
-.social-aside__link-holder li:first-of-type a i {
-	background-image: url(img/youtube.svg);
-}
 
 .social-aside__link-holder li:nth-of-type(2) a i {
 	background-image: url(img/facebook.svg);
