@@ -119,9 +119,10 @@
  * SEARCH
  * -------------------------------------------- */
 
-.widget_search {
-	margin-top: 20px;
- 
+#search-2 {
+ 	margin-bottom: 10px;
+ 	padding: 0;
+
  	> form {
  		position: relative;
 
@@ -154,7 +155,7 @@
  		> label {
 			position: absolute;
 			left: 0;
-			bottom: 4px;
+			bottom: 1px;
 			font-style: italic;
 			color: grey;
 			cursor: pointer;
@@ -186,7 +187,8 @@
 
 .menu-slide--js {
 	.widget_search {
-	 
+		margin-top: 20px;
+
 	 	> form {
 	 		width: 90%;
 	    	margin: 0 auto;
@@ -197,6 +199,10 @@
 				&:focus {
 					border-bottom: 2px solid black;
 				}
+	    	}
+
+	    	> label {
+	    		bottom: 4px !important;
 	    	}
 	    }
 	}
@@ -268,7 +274,7 @@
 	margin-left: 20px;
 	position: absolute;
 	left: 100%;
-	top: 38px;
+	top: 49px;
 }
 
 ul.social-aside__link-holder {
@@ -296,6 +302,7 @@ ul.social-aside__link-holder {
 	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: 0.7px;
+	text-decoration: none;
 	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.45);
 	transition: all 0.1s ease-in-out;
 }
@@ -313,31 +320,6 @@ ul.social-aside__link-holder {
 	}
 }
 
-.social-aside__link-holder li:nth-of-type(2) a {
-	background-color: #3b5999;
-}
-
-.social-aside__link-holder li:nth-of-type(3) a {
-	background-color: #6a453b;
-}
-
-.social-aside__link-holder li:nth-of-type(4) a {
-	background-color: #ffce07;
-}
-
-.social-aside__link-holder li:nth-of-type(5) a {
-	background-color: #6bcfed;
-}
-
-.social-aside__link-holder li:nth-of-type(6) a {
-	background-color: #f132a6;
-}
-
-.social-aside__link-holder li:nth-of-type(7) a {
-	background-color: #de4c40;
-}
-
-
 .social-aside__link-holder a i {
 	position: absolute;
 	top: 0;
@@ -350,55 +332,3 @@ ul.social-aside__link-holder {
 	background-repeat: no-repeat;
 }
 
-
-.social-aside__link-holder li:nth-of-type(2) a i {
-	background-image: url(img/facebook.svg);
-}
-
-.social-aside__link-holder li:nth-of-type(3) a i {
-	background-image: url(img/instagram.svg);
-}
-
-.social-aside__link-holder li:nth-of-type(4) a i {
-	background-image: url(img/snapchat.svg);
-}
-
-.social-aside__link-holder li:nth-of-type(5) a i {
-	background-image: url(img/twitter.svg);
-}
-
-.social-aside__link-holder li:nth-of-type(6) a i {
-	background-color: #f132a6;
-}
-
-.social-aside__link-holder li:nth-of-type(7) a i {
-	background-image: url(img/google+.svg);
-}
-
-.social-aside__link-holder li:first-of-type a i {
-	background-color: #c62326;
-}
-
-.social-aside__link-holder li:nth-of-type(2) a i {
-	background-color: #3b5999;
-}
-
-.social-aside__link-holder li:nth-of-type(3) a i {
-	background-color: #6a453b;
-}
-
-.social-aside__link-holder li:nth-of-type(4) a i {
-	background-color: #ffce07;
-}
-
-.social-aside__link-holder li:nth-of-type(5) a i {
-	background-color: #6bcfed;
-}
-
-.social-aside__link-holder li:nth-of-type(6) a i {
-	background-color: #f132a6;
-}
-
-.social-aside__link-holder li:nth-of-type(7) a i {
-	background-color: #de4c40;
-}

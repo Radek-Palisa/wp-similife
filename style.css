@@ -661,6 +661,13 @@ a:hover, a:active {
 }
 .menu-slide--js .social-aside {
   position: static;
+  margin-left: 0;
+  padding-bottom: 70px;
+}
+@media (min-width: 730px) {
+  .menu-slide--js .social-aside {
+    padding-bottom: 20px;
+  }
 }
 .menu-slide--js .social-aside__link-holder {
   margin-top: 20px;
@@ -707,7 +714,7 @@ a:hover, a:active {
   .secondary-menu__title {
     text-align: right;
     margin: 0;
-    padding: 0;
+    padding: 14px 0 0;
   }
   .secondary-menu__title::before, .secondary-menu__title::after {
     content: none !important;
@@ -957,13 +964,14 @@ a:hover, a:active {
 /* --------------------------------
  * SEARCH
  * -------------------------------------------- */
-.widget_search {
-  margin-top: 20px;
+#search-2 {
+  margin-bottom: 10px;
+  padding: 0;
 }
-.widget_search > form {
+#search-2 > form {
   position: relative;
 }
-.widget_search > form > .search-text {
+#search-2 > form > .search-text {
   width: 100%;
   padding: 10px 25px 3px 0;
   border: 0;
@@ -975,29 +983,29 @@ a:hover, a:active {
   background: transparent;
   transition: all 0.1s ease-in-out 0.2s;
 }
-.widget_search > form > .search-text:focus {
+#search-2 > form > .search-text:focus {
   border-bottom: 1px solid black;
 }
-.widget_search > form > .search-text:-webkit-autofill, .widget_search > form > .search-text:-webkit-autofill:hover, .widget_search > form > .search-text:-webkit-autofill:focus
-.widget_search > form > .search-text:-webkit-autofill {
+#search-2 > form > .search-text:-webkit-autofill, #search-2 > form > .search-text:-webkit-autofill:hover, #search-2 > form > .search-text:-webkit-autofill:focus
+#search-2 > form > .search-text:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
   transition: background-color 5000s ease-in-out 0s;
 }
-.widget_search > form > label {
+#search-2 > form > label {
   position: absolute;
   left: 0;
-  bottom: 4px;
+  bottom: 1px;
   font-style: italic;
   color: grey;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-.widget_search > form > .search-text--focus + label {
+#search-2 > form > .search-text--focus + label {
   transform: translateY(-29px);
   font-size: 0.9rem;
   color: rgba(128, 128, 128, 0.7);
 }
-.widget_search > form > .search-submit {
+#search-2 > form > .search-submit {
   position: absolute;
   top: 0;
   bottom: 1px;
@@ -1013,6 +1021,9 @@ a:hover, a:active {
   background-size: 16px 16px;
 }
 
+.menu-slide--js .widget_search {
+  margin-top: 20px;
+}
 .menu-slide--js .widget_search > form {
   width: 90%;
   margin: 0 auto;
@@ -1022,6 +1033,9 @@ a:hover, a:active {
 }
 .menu-slide--js .widget_search > form > .search-text:focus {
   border-bottom: 2px solid black;
+}
+.menu-slide--js .widget_search > form > label {
+  bottom: 4px !important;
 }
 
 /* --------------------------------
@@ -1084,7 +1098,7 @@ a:hover, a:active {
   margin-left: 20px;
   position: absolute;
   left: 100%;
-  top: 38px;
+  top: 49px;
 }
 
 ul.social-aside__link-holder {
@@ -1111,6 +1125,7 @@ ul.social-aside__link-holder {
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.7px;
+  text-decoration: none;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.45);
   transition: all 0.1s ease-in-out;
 }
@@ -1127,30 +1142,6 @@ ul.social-aside__link-holder {
     text-decoration: none;
   }
 }
-.social-aside__link-holder li:nth-of-type(2) a {
-  background-color: #3b5999;
-}
-
-.social-aside__link-holder li:nth-of-type(3) a {
-  background-color: #6a453b;
-}
-
-.social-aside__link-holder li:nth-of-type(4) a {
-  background-color: #ffce07;
-}
-
-.social-aside__link-holder li:nth-of-type(5) a {
-  background-color: #6bcfed;
-}
-
-.social-aside__link-holder li:nth-of-type(6) a {
-  background-color: #f132a6;
-}
-
-.social-aside__link-holder li:nth-of-type(7) a {
-  background-color: #de4c40;
-}
-
 .social-aside__link-holder a i {
   position: absolute;
   top: 0;
@@ -1161,58 +1152,6 @@ ul.social-aside__link-holder {
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
-}
-
-.social-aside__link-holder li:nth-of-type(2) a i {
-  background-image: url(img/facebook.svg);
-}
-
-.social-aside__link-holder li:nth-of-type(3) a i {
-  background-image: url(img/instagram.svg);
-}
-
-.social-aside__link-holder li:nth-of-type(4) a i {
-  background-image: url(img/snapchat.svg);
-}
-
-.social-aside__link-holder li:nth-of-type(5) a i {
-  background-image: url(img/twitter.svg);
-}
-
-.social-aside__link-holder li:nth-of-type(6) a i {
-  background-color: #f132a6;
-}
-
-.social-aside__link-holder li:nth-of-type(7) a i {
-  background-image: url(img/google+.svg);
-}
-
-.social-aside__link-holder li:first-of-type a i {
-  background-color: #c62326;
-}
-
-.social-aside__link-holder li:nth-of-type(2) a i {
-  background-color: #3b5999;
-}
-
-.social-aside__link-holder li:nth-of-type(3) a i {
-  background-color: #6a453b;
-}
-
-.social-aside__link-holder li:nth-of-type(4) a i {
-  background-color: #ffce07;
-}
-
-.social-aside__link-holder li:nth-of-type(5) a i {
-  background-color: #6bcfed;
-}
-
-.social-aside__link-holder li:nth-of-type(6) a i {
-  background-color: #f132a6;
-}
-
-.social-aside__link-holder li:nth-of-type(7) a i {
-  background-color: #de4c40;
 }
 
 /*--------------------------------------------------------------
@@ -1248,7 +1187,7 @@ ul.social-aside__link-holder {
   .site-main {
     display: flex;
     justify-content: center;
-    padding: 44px 0;
+    padding: 35px 0;
   }
 }
 
@@ -1522,6 +1461,7 @@ object {
 .header-site-navigation {
   order: 3;
   width: 100%;
+  min-height: 39px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -1529,6 +1469,9 @@ object {
   text-align: center;
 }
 
+.main-navigation {
+  display: none;
+}
 .main-navigation > div > ul > li {
   display: inline-block;
 }
@@ -1775,7 +1718,7 @@ object {
 @media (min-width: 1050px) {
   .excerpts-header {
     margin-bottom: 10px;
-    padding: 0;
+    padding: 13px 0 0;
     border-bottom: 1px solid #d8d8d8;
   }
   .excerpts-header > strong {

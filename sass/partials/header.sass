@@ -98,34 +98,38 @@
 .header-site-navigation
 	order: 3
 	width: 100%
+	min-height: 39px
 	position: relative
 	display: flex
 	justify-content: center
 	align-items: center
 	text-align: center
 
-.main-navigation > div
+.main-navigation 
+	display: none
+	
+	> div
 
-	> ul > li 
-		display: inline-block
-
-		> a
+		> ul > li 
 			display: inline-block
-			padding: 7px 17px
-			letter-spacing: 1.3px
-			color: #666
-			font-size: 13px
-			border-radius: 3px
-			cursor: pointer
-			font-weight: 500
-			text-transform: uppercase
-			text-decoration: none
 
-			&:hover 
-				color: black
+			> a
+				display: inline-block
+				padding: 7px 17px
+				letter-spacing: 1.3px
+				color: #666
+				font-size: 13px
+				border-radius: 3px
+				cursor: pointer
+				font-weight: 500
+				text-transform: uppercase
+				text-decoration: none
 
-	> li + li
-		margin-left: 20px
+				&:hover 
+					color: black
+
+		> li + li
+			margin-left: 20px
 
 .menu-button
 	display: none
