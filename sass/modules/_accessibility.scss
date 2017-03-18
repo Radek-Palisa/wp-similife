@@ -30,3 +30,11 @@
 #content[tabindex="-1"]:focus {
 	outline: 0;
 }
+
+.text-hide {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}

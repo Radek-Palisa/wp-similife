@@ -1,0 +1,67 @@
+$pagination-bg: $secondary-color;
+
+.pagination {
+	margin-top: 35px;
+
+	> ul {
+		display: flex;
+		justify-content: center;
+
+		> li + li {
+			margin-left: 5px;
+		}
+		> li {
+			font-size: 15px;
+
+			> a {
+				display: inline-block;
+				text-align: center;
+				min-width: 30px;
+				min-height: 30px;
+				line-height: 30px;
+				text-decoration: none;
+				padding: 0 4px;
+				color: $pagination-bg;
+				border: 1px solid $pagination-bg;
+				border-radius: 2px;
+
+
+				&:hover {
+					background-color: $pagination-bg;
+					color: white;
+				}
+			}
+		}
+
+		> li.prev, > li.next {
+			@extend .text-hide;
+			background-repeat: no-repeat;
+			background-size: 60px 30px;
+			background-position: 0 1px;
+			&:hover {
+				background-color: $pagination-bg;
+
+				> a {
+					background-color: transparent;
+				}
+			}
+		}
+
+		>li.prev {
+			background-image: url('/wp-similife/wp-content/uploads/2017/03/arrow-left-2.png');
+			transform: rotateZ(180deg);
+
+			&:hover {
+				background-position: -30px 1px;
+			}
+		}
+
+		>li.next {
+			background-image: url('/wp-similife/wp-content/uploads/2017/03/arrow-left-2.png');
+
+			&:hover {
+				background-position: -30px 1px;
+			}
+		}
+	}
+}

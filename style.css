@@ -544,7 +544,7 @@ a:hover, a:active {
     opacity: 0;
     position: absolute;
     width: 45px;
-    right: 430px;
+    right: 410px;
     top: 20px;
     padding: 8px;
   }
@@ -761,6 +761,60 @@ a:hover, a:active {
   }
 }
 
+.pagination {
+  margin-top: 35px;
+}
+.pagination > ul {
+  display: flex;
+  justify-content: center;
+}
+.pagination > ul > li + li {
+  margin-left: 5px;
+}
+.pagination > ul > li {
+  font-size: 15px;
+}
+.pagination > ul > li > a {
+  display: inline-block;
+  text-align: center;
+  min-width: 30px;
+  min-height: 30px;
+  line-height: 30px;
+  text-decoration: none;
+  padding: 0 4px;
+  color: #97bfbf;
+  border: 1px solid #97bfbf;
+  border-radius: 2px;
+}
+.pagination > ul > li > a:hover {
+  background-color: #97bfbf;
+  color: white;
+}
+.pagination > ul > li.prev, .pagination > ul > li.next {
+  background-repeat: no-repeat;
+  background-size: 60px 30px;
+  background-position: 0 1px;
+}
+.pagination > ul > li.prev:hover, .pagination > ul > li.next:hover {
+  background-color: #97bfbf;
+}
+.pagination > ul > li.prev:hover > a, .pagination > ul > li.next:hover > a {
+  background-color: transparent;
+}
+.pagination > ul > li.prev {
+  background-image: url("/wp-similife/wp-content/uploads/2017/03/arrow-left-2.png");
+  transform: rotateZ(180deg);
+}
+.pagination > ul > li.prev:hover {
+  background-position: -30px 1px;
+}
+.pagination > ul > li.next {
+  background-image: url("/wp-similife/wp-content/uploads/2017/03/arrow-left-2.png");
+}
+.pagination > ul > li.next:hover {
+  background-position: -30px 1px;
+}
+
 /*--------------------------------------------------------------
 # Modules
 --------------------------------------------------------------*/
@@ -796,6 +850,14 @@ a:hover, a:active {
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
   outline: 0;
+}
+
+.text-hide, .pagination > ul > li.prev, .pagination > ul > li.next {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
 }
 
 .alignleft {
@@ -959,6 +1021,9 @@ a:hover, a:active {
   text-decoration: none;
   color: #777;
   font-size: 14px;
+}
+.about-link > a:hover {
+  color: black;
 }
 
 /* --------------------------------
@@ -1620,7 +1685,9 @@ object {
 
 .featured-thumb {
   padding-bottom: 80%;
-  background-size: cover;
+  background-size: auto 100%;
+  background-position: center center;
+  transition: background-size 0.3s ease-in-out;
 }
 @media (min-width: 730px) {
   .featured-thumb {
@@ -1643,6 +1710,11 @@ object {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
 }
 
+@media (min-width: 1050px) {
+  .featured__item:hover > a > div {
+    background-size: auto 110%;
+  }
+}
 .featured__item > a {
   position: relative;
   display: block;

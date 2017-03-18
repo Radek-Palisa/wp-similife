@@ -79,7 +79,9 @@
 
 .featured-thumb {
 	padding-bottom: 80%;
-	background-size: cover;
+	background-size: auto 100%;
+	background-position: center center;
+	transition: background-size 0.3s ease-in-out;
 
 	@media (min-width: $break-header) {
 		padding-bottom: 60%
@@ -95,6 +97,12 @@
 		position: absolute;
 		left: 0; right: 0; top: 0; bottom: 0;
 		background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)); 
+	}
+}
+
+@media (min-width: $break-featured) {
+	.featured__item:hover > a > div {
+		background-size: auto 110%;
 	}
 }
 
