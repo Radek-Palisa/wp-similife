@@ -1,0 +1,18 @@
+
+.site-footer {
+	text-align: center;
+	background-color: #5a7979;
+	color: white;
+
+	> .footer-widgets {
+		padding: 80px 0;
+	}
+}
+
+.site-info {
+	padding: 15px 0;
+
+	> small {
+		color: white;
+	}
+}

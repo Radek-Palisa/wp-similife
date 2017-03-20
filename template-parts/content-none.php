@@ -11,7 +11,7 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'similife' ); ?></h1>
+		<h1 class="page-title"><?php esc_html_e( 'Nic nenalezeno', 'similife' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
@@ -22,11 +22,13 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'similife' ); ?></p>
-			<?php
-				get_search_form();
+			<p><?php esc_html_e( 'Jejda, vypadá to, že nic takového tu nemám, ale tady máte alespoň puppyho.', 'similife' ); ?></p>
+			<p>Zkuste nové hledání?</p>
+			<img src="http://localhost/wp-similife/wp-content/uploads/2017/03/Puppy_2_kbhb4a.jpg">
+			
 
-		else : ?>
+
+		<?php else : ?>
 
 			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'similife' ); ?></p>
 			<?php

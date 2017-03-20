@@ -33,6 +33,11 @@ $pagination-bg: $secondary-color;
 			}
 		}
 
+		> li.active > a {
+			background-color: $pagination-bg;
+			color: white;			
+		}
+
 		> li.prev, > li.next {
 			@extend .text-hide;
 			background-repeat: no-repeat;

@@ -790,6 +790,10 @@ a:hover, a:active {
   background-color: #97bfbf;
   color: white;
 }
+.pagination > ul > li.active > a {
+  background-color: #97bfbf;
+  color: white;
+}
 .pagination > ul > li.prev, .pagination > ul > li.next {
   background-repeat: no-repeat;
   background-size: 60px 30px;
@@ -1964,6 +1968,91 @@ object {
     padding: 0 0 0 18px;
     background-position: 0 4px;
   }
+}
+
+.partners-aside {
+  margin: 10px 0;
+  padding: 30px 0;
+  text-align: center;
+  background-color: #eff5f5;
+}
+.partners-aside > h3 {
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #777;
+}
+.partners-aside > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.partners-aside > ul > li + li {
+  margin-left: 30px;
+}
+.partners-aside > ul > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 1px dashed rgba(0, 0, 0, 0.7);
+}
+
+.site-main--single {
+  display: block;
+  background-color: white;
+  padding-top: 0;
+}
+
+.single-thumb {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.single-header {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.single-header .tags-links {
+  max-width: none;
+  display: inline-block;
+}
+
+.single-meta {
+  margin-bottom: 50px;
+  color: #adadad;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.single-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.single-content p {
+  max-width: 41em;
+  margin: 1em auto;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.site-footer {
+  text-align: center;
+  background-color: #5a7979;
+  color: white;
+}
+.site-footer > .footer-widgets {
+  padding: 80px 0;
+}
+
+.site-info {
+  padding: 15px 0;
+}
+.site-info > small {
+  color: white;
 }
 
 #wpadminbar {

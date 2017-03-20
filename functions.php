@@ -102,6 +102,32 @@ function similife_widgets_init() {
 }
 add_action( 'widgets_init', 'similife_widgets_init' );
 
+function partners_widget_init() {
+    register_sidebar( array(
+        'name' => __( 'Partners', 'similife' ),
+        'id' => 'partners-aside',
+        'description' => esc_html__( 'Add widgets here.', 'similife' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</li>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+    ) );
+}
+add_action( 'widgets_init', 'partners_widget_init' );
+
+function footer_widgets_init() {
+    register_sidebar( array(
+        'name' => __( 'Footer', 'similife' ),
+        'id' => 'footer-widgets',
+        'description' => esc_html__( 'Add widgets here.', 'similife' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h4 class="footer-widget-title">',
+		'after_title'   => '</h4>',
+    ) );
+}
+add_action( 'widgets_init', 'footer_widgets_init' );
+
 /**
  * Enqueue scripts and styles.
  */

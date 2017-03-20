@@ -86,6 +86,15 @@ get_header(); ?>
 
 			<?php get_sidebar(); ?>
 		</main><!-- #main -->
+
+		<?php if ( is_active_sidebar( 'partners-aside' ) ) : ?>
+			<section class="partners-aside">
+				<h3>Partneři</h3>
+				<ul class="widget-area" role="complementary">
+					<?php dynamic_sidebar( 'partners-aside' ); ?>
+				</ul>
+			</section>
+		<?php endif; ?>
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>

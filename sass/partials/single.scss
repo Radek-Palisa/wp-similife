@@ -1,0 +1,39 @@
+.site-main--single {
+	display: block;
+	background-color: white;
+	padding-top: 0;
+}
+
+.single-thumb {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.single-header {
+	max-width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+
+	.tags-links {
+		max-width: none;
+		display: inline-block;
+	}
+}
+
+.single-meta {
+	margin-bottom: 50px;
+	color: #adadad;
+	border-bottom: 1px solid #d8d8d8;
+}
+
+.single-content {
+	max-width: 1000px;
+	margin: 0 auto;
+
+	p {
+		max-width: 41em;
+		margin: 1em auto;
+		font-size: 18px;
+		line-height: 1.7;
+	}
+}
