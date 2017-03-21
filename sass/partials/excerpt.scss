@@ -151,20 +151,10 @@
 
 .tags-links {
 	padding-left: 20px;
-	background-image: url('/wp-similife/wp-content/uploads/2017/03/tags-sm.png');
-	background-repeat: no-repeat;
-	background-position: 0 2px;
-	@media (min-width: 370px) {
-		background-position: 0 5px;
 
-	}
 	@media (min-width: $break-excerpt-footer) {
 		max-width: 200px;
 		padding-left: 0;
-
-		> a:first-of-type {
-			padding-left: 20px;
-		}
 	}
 
 	> a {
@@ -173,12 +163,35 @@
 		font-size: 14px;
 		white-space: nowrap;
 
+		&:first-of-type {
+			position: relative;
+
+			&::before {
+				content: '';
+				position: absolute;
+				height: 1em;
+				width: 1em;
+				left: -20px;
+				top: 1px;
+				background-image: url('/wp-similife/wp-content/uploads/2017/03/tags-sm.png');
+				background-repeat: no-repeat;
+			}
+
+			@media (min-width: $break-excerpt-footer) {
+				padding-left: 20px;
+
+				&::before {
+					left: 0;
+				}
+			}
+		}
+
 		&:hover, &:focus {
 			text-decoration: underline;
 		}
 
 		&:visited, &:active {
-			color: #bd116f;
+			color: $highlight-color;
 		}
 	}
 }

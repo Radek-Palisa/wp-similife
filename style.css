@@ -1907,22 +1907,11 @@ object {
 
 .tags-links {
   padding-left: 20px;
-  background-image: url("/wp-similife/wp-content/uploads/2017/03/tags-sm.png");
-  background-repeat: no-repeat;
-  background-position: 0 2px;
-}
-@media (min-width: 370px) {
-  .tags-links {
-    background-position: 0 5px;
-  }
 }
 @media (min-width: 450px) {
   .tags-links {
     max-width: 200px;
     padding-left: 0;
-  }
-  .tags-links > a:first-of-type {
-    padding-left: 20px;
   }
 }
 .tags-links > a {
@@ -1931,11 +1920,32 @@ object {
   font-size: 14px;
   white-space: nowrap;
 }
+.tags-links > a:first-of-type {
+  position: relative;
+}
+.tags-links > a:first-of-type::before {
+  content: '';
+  position: absolute;
+  height: 1em;
+  width: 1em;
+  left: -20px;
+  top: 1px;
+  background-image: url("/wp-similife/wp-content/uploads/2017/03/tags-sm.png");
+  background-repeat: no-repeat;
+}
+@media (min-width: 450px) {
+  .tags-links > a:first-of-type {
+    padding-left: 20px;
+  }
+  .tags-links > a:first-of-type::before {
+    left: 0;
+  }
+}
 .tags-links > a:hover, .tags-links > a:focus {
   text-decoration: underline;
 }
 .tags-links > a:visited, .tags-links > a:active {
-  color: #bd116f;
+  color: #ff1896;
 }
 
 .excerpt-goToPostBtn {
@@ -2009,13 +2019,18 @@ object {
 
 .single-thumb {
   text-align: center;
-  margin-bottom: 40px;
 }
 
 .single-header {
-  max-width: 1000px;
+  max-width: 1040px;
   margin: 0 auto;
+  padding: 0 20px;
   text-align: center;
+}
+@media (max-width: 730px) {
+  .single-header h1 {
+    font-size: 1.5em;
+  }
 }
 .single-header .tags-links {
   max-width: none;
@@ -2023,20 +2038,58 @@ object {
 }
 
 .single-meta {
-  margin-bottom: 50px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.7;
   color: #adadad;
   border-bottom: 1px solid #d8d8d8;
+  text-align: left;
+  font-size: 13px;
+  font-style: italic;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (min-width: 730px) {
+  .single-meta {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 15px;
+  }
+}
+.single-meta > ol > li {
+  display: inline-block;
+}
+.single-meta a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .single-content {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 10px;
+  font-size: 15px;
 }
-.single-content p {
+@media (min-width: 370px) {
+  .single-content {
+    padding: 0 20px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 730px) {
+  .single-content {
+    font-size: 18px;
+  }
+}
+.single-content p, .single-content div[dir="ltr"] {
   max-width: 41em;
   margin: 1em auto;
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: 1em;
+  line-height: 1.6;
+}
+.single-content div[dir="ltr"] p {
+  font-size: 1em;
 }
 
 .site-footer {

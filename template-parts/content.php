@@ -20,6 +20,11 @@
 		<?php
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="single-meta">
+			<ol>
+				<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Similife</a></li>
+				<li> > Blog > </li>
+				<li><?php echo the_title() ?></li>
+			</ol>
 			<?php similife_posted_on(); ?>	
 		</div><!-- .entry-meta -->
 		<?php
