@@ -6,6 +6,10 @@
 
 .single-thumb {
 	text-align: center;
+
+	> img {
+		width: 100%;
+	}
 }
 
 .single-header {
@@ -84,3 +88,38 @@
 		font-size: 1em;
 	}
 }
+
+.post-navigation-outer {
+	max-width: 1000px;
+	padding: 0 5px;
+	margin: 0 auto 30px !important;
+
+	.nav-links {
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+
+		> div {
+			max-width: 48%;
+
+			a {
+				display: flex;
+				align-items: center;
+				height: 100%;
+				text-decoration: none;
+				padding: 7px 10px;
+				border: 1px solid #d8d8d8;
+
+				&:hover {
+					border: 1px solid black;
+				}
+			}
+		}
+	}
+}
+
+.navigation-labels {
+	display: flex;
+	justify-content: space-between;
+}
+

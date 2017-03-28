@@ -81,7 +81,7 @@
 	padding-bottom: 80%;
 	background-size: auto 100%;
 	background-position: center center;
-	transition: background-size 0.3s ease-in-out;
+	transition: background-size 0.15s ease-in-out;
 
 	@media (min-width: $break-header) {
 		padding-bottom: 60%
@@ -102,7 +102,7 @@
 
 @media (min-width: $break-featured) {
 	.featured__item:hover > a > div {
-		background-size: auto 110%;
+		background-size: auto 107%;
 	}
 }
 

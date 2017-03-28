@@ -127,6 +127,7 @@
 		$siteNavigation.fadeIn();
 	})
 } )();
+
 $(function() {
 	var searchInput = $('#search');
 
@@ -146,4 +147,26 @@ $(function() {
 			}
 		}
 	})
+
+	var $socialLinks = $('.social-aside a');
+	var socialLinkTitles = [];
+
+	$socialLinks.each(function() {
+		socialLinkTitles.push(this.getAttribute('title'));
+	});
+
+	$(window).on('load resize', function() {
+
+		if ($('#menu-slide').hasClass('menu-slide--js') || window.matchMedia('(min-width: 1600px)').matches) {
+			$socialLinks.each(function() {	
+				self = $(this);
+				self.removeAttr('title');
+			});
+		} else {
+			for (var i = 0; i < $socialLinks.length; i++) {
+				$socialLinks[i].setAttribute('title', socialLinkTitles[i]);
+			}
+		}
+	})
 ;});
+

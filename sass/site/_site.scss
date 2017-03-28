@@ -21,12 +21,14 @@
 .site-main {
 
 	@media (min-width: $break-excerpt-image) {
+		min-height: 50vh;
 		background-color: $grey-bg;
 	}
 
 	@media (min-width: $break-featured) {
 		display: flex;
 		justify-content: center;
+		align-items: flex-start;
 		padding: 35px 0; 
 	}
 }

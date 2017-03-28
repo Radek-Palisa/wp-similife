@@ -35,7 +35,7 @@ get_header(); ?>
 	</section>
 
 	<section class="social-following">
-		<strong class="title-lines">i, i follow, follow you, deep sea baby</strong>
+		<strong class="title-lines" style="font-weight: normal; padding: 5px 0; font-size: 14px;">social following widget</strong>
 	</section>
 
 	<div id="primary" class="content-area">

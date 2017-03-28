@@ -4,6 +4,14 @@
 	background-color: #5a7979;
 	color: white;
 
+	@media (min-width: $break-md) {
+		margin: 0 10px;
+	}
+
+	@media (min-width: 1700px) {
+		margin: 0 44px;
+	}
+	
 	> .footer-widgets {
 		padding: 80px 0;
 	}

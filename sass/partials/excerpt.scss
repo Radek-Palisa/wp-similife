@@ -4,17 +4,19 @@
 	text-align: center;
 
 
-	> strong {
+	> strong, > h1 {
 		position: relative;
 		display: block;
-		padding: 5px 0;	
-		@extend .title-lines;	
+		padding: 5px 0;
+		margin: 0;
+		font-size: 14px;
+		@extend .title-lines;
 	}
 
 	@media (min-width: $break-excerpt-image) {
 		margin-bottom: 20px;
 		
-		> strong {
+		> strong, > h1 {
 			font-weight: normal
 		}
 	}
@@ -31,7 +33,7 @@
 		padding: 13px 0 0;
 		border-bottom: 1px solid #d8d8d8;
 
-		> strong {
+		> strong, > h1 {
 			padding: 0;
 			font-style: italic;
 			font-size: 16px;
@@ -212,6 +214,10 @@
 	background-image: url('/wp-similife/wp-content/uploads/2017/03/next-sm.png');
 	background-repeat: no-repeat;
 	background-position: 7px 9px;
+	
+	&:visited {
+		color: inherit;
+	}
 
 	&:active {
 		box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);

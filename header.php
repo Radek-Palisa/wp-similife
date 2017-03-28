@@ -41,8 +41,8 @@
 			endif; ?>
 
 			<a class="site-branding__logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-				<img src="http://localhost/wp-similife/wp-content/uploads/2017/03/logo-cut-small-logo.png" alt="SimiLife">
-				<img src="http://localhost/wp-similife/wp-content/uploads/2017/03/logo-cut-small-desc.png" alt="Lifestyle blog">
+				<img src="http://localhost/wp-similife/wp-content/uploads/2017/03/logo-bolder.svg" alt="SimiLife">
+				<img src="http://localhost/wp-similife/wp-content/uploads/2017/03/desc-bolder.svg" alt="Lifestyle blog">
 			</a>
 		</div><!-- .site-branding -->
 		<div class="header-site-navigation title-lines" id="headerSiteNavigation">
