@@ -15,6 +15,9 @@
 
 	@media (min-width: $break-excerpt-image) {
 		margin-bottom: 20px;
+	}
+
+	@media (min-width: $break-header) {
 		
 		> strong, > h1 {
 			font-weight: normal
@@ -175,7 +178,7 @@
 				width: 1em;
 				left: -20px;
 				top: 1px;
-				background-image: url('/wp-similife/wp-content/uploads/2017/03/tags-sm.png');
+				background-image: url('images/tags-sm.png');
 				background-repeat: no-repeat;
 			}
 
@@ -211,7 +214,7 @@
 	border: 1px solid #d1d2d2;
 	border-radius: 2px;
 
-	background-image: url('/wp-similife/wp-content/uploads/2017/03/next-sm.png');
+	background-image: url('images/next-sm.png');
 	background-repeat: no-repeat;
 	background-position: 7px 9px;
 	

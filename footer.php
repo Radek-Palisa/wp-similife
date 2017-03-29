@@ -27,7 +27,6 @@
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
 
-<!-- <script src="<?php bloginfo('template_directory'); ?>/js/modernizr-flexbox.js"></script> -->
 <script src="<?php bloginfo('template_directory'); ?>/js/jquery-3.1.1.min.js"></script>
 <?php wp_footer(); ?>
 

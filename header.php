@@ -15,24 +15,35 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,700&amp;subset=latin-ext" rel="stylesheet">
 
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+
+<!--[if lt IE 10]>
+<div class="browser-notify">
+<img src="<?php bloginfo('template_directory'); ?>/images/logo-bolder-white.svg">
+<p class="browser-notify__message">Tyto webové stránky jsou optimalizované pro moderní prohlížeče a nepodporují vaší verzi Internet Exploreru.</p>
+</div>
+<![endif]-->
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'similife' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
+
+
 			<?php
+			/*
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php else : ?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php
-			endif;
+			endif; */
 
 			$description = get_bloginfo( 'description', 'display' );
 			if ( $description || is_customize_preview() ) : ?>
@@ -41,8 +52,8 @@
 			endif; ?>
 
 			<a class="site-branding__logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-				<img src="http://localhost/wp-similife/wp-content/uploads/2017/03/logo-bolder.svg" alt="SimiLife">
-				<img src="http://localhost/wp-similife/wp-content/uploads/2017/03/desc-bolder.svg" alt="Lifestyle blog">
+				<img src="<?php bloginfo('template_directory'); ?>/images/logo-bolder.svg" alt="SimiLife">
+				<img src="<?php bloginfo('template_directory'); ?>/images/desc-bolder.svg" alt="Lifestyle blog">
 			</a>
 		</div><!-- .site-branding -->
 		<div class="header-site-navigation title-lines" id="headerSiteNavigation">

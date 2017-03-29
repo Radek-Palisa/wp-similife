@@ -10,22 +10,22 @@ module.exports = function(grunt) {
 		  dev: {
 		    options: {
 		      style: 'expanded',
-		      sourcemap: 'auto',
+		      sourcemap: 'none',
 		    },
 		    files: {
-		      'style.css': 'sass/style.scss'
+		      'style-human.css': 'sass/style.scss'
 		    }
-		  }
+		  },
 		  // Concatenate CSS when done with development	
-		 //  dist: {
-			// options: {
-			//   style: 'compressed',
-			//   sourcemap: 'none',
-			// },
-			// files: {
-			//   'style-min.css': 'sass/main.scss'
-			// }
-		 //  }
+		  dist: {
+			options: {
+			  style: 'compressed',
+			  sourcemap: 'none',
+			},
+			files: {
+			  'style.css': 'sass/style.scss'
+			}
+		  }
 		},
 
 		/**
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
 			options: { livereload: true},
 			css: {
 				files: 'sass/**/*.{scss,sass}',
-				tasks: ['sass'] // add ,'autoprefixer' here to switch it on, its off cos it disables source-mapping
+				tasks: ['sass', 'autoprefixer'] // add ,'autoprefixer' here to switch it on, its off cos it disables source-mapping
 			},
 			phtml: {
 				files: '**/*.php',

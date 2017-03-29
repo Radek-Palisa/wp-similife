@@ -98,14 +98,6 @@
  * O NMNE
  * -------------------------------------------- */
 
- .profile-pic {
-	width: 180px;
-	height: 180px;
-	margin: 30px auto;
-	border-radius: 50%;
-	background: url('img/profile.png') center / 140% no-repeat;
-}
-
 .about-link > a {
 	display: inline-block;
 	padding-bottom: 1px;
@@ -181,7 +173,7 @@
  			border: 0;
  			outline: none;
  			background-color: transparent;
- 			background-image: url('/wp-similife/wp-content/uploads/2017/03/search-sm.png');
+ 			background-image: url('images/search-sm.png');
  			background-repeat: no-repeat;
  			background-position: right 3px bottom 7px;
  			background-size: 16px 16px;

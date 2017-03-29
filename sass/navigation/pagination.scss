@@ -2,6 +2,7 @@ $pagination-bg: $secondary-color;
 
 .pagination {
 	margin-top: 35px;
+	padding-bottom: 35px;
 
 	> ul {
 		display: flex;
@@ -53,7 +54,7 @@ $pagination-bg: $secondary-color;
 		}
 
 		>li.prev {
-			background-image: url('/wp-similife/wp-content/uploads/2017/03/arrow-left-2.png');
+			background-image: url('images/arrow-left-2.png');
 			transform: rotateZ(180deg);
 
 			&:hover {
@@ -62,7 +63,7 @@ $pagination-bg: $secondary-color;
 		}
 
 		>li.next {
-			background-image: url('/wp-similife/wp-content/uploads/2017/03/arrow-left-2.png');
+			background-image: url('images/arrow-left-2.png');
 
 			&:hover {
 				background-position: -30px 1px;
